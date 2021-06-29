@@ -1,0 +1,54 @@
+<header>
+  <nav class="top-menu">
+    <ul class="menu-main">
+      <li class="right-item"><a href="/admin">Cabinet</a></li>
+
+    </ul>
+  </nav>
+</header>
+<div class="container">
+
+  <table>
+    <tr class="table-header">
+      <th>№</th>
+      <th>UserId</th>
+      <th>Course</th>
+      <th>Description</th>
+      <th class="roleHead">Feedback</th>
+      <th class="statusHead">Score</th>
+    </tr>
+    <tr *ngFor="let course of courses; let i = index">
+      <td class="username">{{i + 1}}</td>
+      <td>{{course.userId}}</td>
+      <td>{{course.name}}</td>
+      <td class="commenter">{{course.description}}<i class="fas fa-angle-down"></i></td>
+<!--      <td *ngIf="reservation.roomId.name;else elseBlock " class="commenter">{{reservation.roomId.name}}<i-->
+<!--        class="fas fa-angle-down"></i>-->
+<!--      </td>-->
+<!--      <ng-template #elseBlock>-->
+<!--        <td class="commenter">-->
+<!--          <select  (change)="onSelect($event.target.value)">-->
+<!--            <option *ngFor="let room of courses" value="{{room.id}}" id="{{room.id}}" name="{{room.id}}"> {{room.name}}</option>-->
+<!--          </select>-->
+<!--        </td>-->
+<!--      </ng-template>-->
+
+
+<!--      <td class="activeUser">{{reservation.status}}<i class="fas fa-angle-down"></i></td>-->
+<!--      <div [ngSwitch]="reservation.status">-->
+<!--        <ng-template ngSwitchCase="PENDING">-->
+<!--          <td>-->
+<!--            <a class="no-button blur-hover" (click)="updateReservation(reservation.id)">&#10004;</a>-->
+<!--            <a class="no-button blur-hover" (click)="updateReservation( reservation.id)">-->
+<!--              &#10006;</a>-->
+<!--          </td>-->
+<!--        </ng-template>-->
+<!--        <ng-template ngSwitchDefault>-->
+<!--          <td></td>-->
+<!--        </ng-template>-->
+<!--      </div>-->
+
+    </tr>
+  </table>
+</div>
+<input type="submit" value="Logout" (click)="logout()">

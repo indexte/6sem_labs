@@ -1,0 +1,43 @@
+<header>
+  <nav class="top-menu">
+    <ul class="menu-main">
+      <li class="left-item"><a href="/cabinet">Cabinet</a></li>
+      <li class="left-item"><a href="/order">Book Room</a></li>
+      <li class="left-item"><a href="/rooms">Our Rooms</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+
+  <table>
+    <tr class="table-header">
+      <th></th>
+      <th>Name</th>
+      <th>Description</th>
+      <th class="roleHead">Teacher</th>
+      <th class="statusHead">Feedback</th>
+      <th class="statusHead">Score</th>
+    </tr>
+
+    <tr *ngFor="let course of courses; let i = index">
+      <td class="username">{{i + 1}}</td>
+      <td>{{course.name}}</td>
+      <td>{{course.description}}</td>
+      <td class="commenter">Mykola Al.<i class="fas fa-angle-down"></i></td>
+      <td *ngIf="feedbacks ;else elseBlock " class="commenter">{{feedbacks[i].description}}<i
+        class="fas fa-angle-down"></i>
+      </td>
+      <td *ngIf="feedbacks ;else elseBlock " class="commenter">{{feedbacks[i].score}}<i
+        class="fas fa-angle-down"></i>
+      </td>
+      <ng-template #elseBlock>
+        <td class="commenter"> Not feedback yet<i class="fas fa-angle-down"></i></td>
+      </ng-template>
+
+
+
+    </tr>
+  </table>
+</div>
+  <input type="submit" value="Logout" (click)="logout()">

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Context>
+    <Resource name="jdbc/hotel"
+              auth="Container"
+              type="javax.sql.DataSource"
+              factory="org.apache.tomcat.jdbc.pool.DataSourceFactory"
+              validationQuery="SELECT 1"
+              validationInterval="30000"
+              username="postgres"
+              password="1234"
+              driverClassName="org.postgresql.Driver"
+              url="jdbc:postgresql://localhost:5432/hotel?useSSL=false&amp;useUnicode=yes&amp;characterEncoding=UTF-8&amp;allowPublicKeyRetrieval=true&amp;serverTimezone=UTC"
+              removeAbandoned="true"
+              removeAbandonedTimeout="30"
+              maxActive="15"
+              maxIdle="3"/>
+
+</Context>

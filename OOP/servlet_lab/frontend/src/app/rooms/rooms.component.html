@@ -1,0 +1,50 @@
+<header>
+  <nav class="top-menu">
+    <ul class="menu-main">
+
+      <li class="left-item"><a href="/cabinet">Cabinet</a></li>
+      <li class="left-item"><a href="/order">Book Room</a></li>
+      <li class="left-item"><a href="/rooms">Our Rooms</a></li>
+
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+
+  <div class="right-block">
+    <div class="left-block">
+      <a href="/rooms/1?field=price&direction=asc"></a>
+      <a href="/rooms/1?field=price&direction=desc'}"></a>
+      <a href="/rooms/1?field=places&direction=asc'}"></a>
+      <a href="/rooms/1?field=places&direction=desc'}"></a>
+    </div>
+
+    <div>
+      <div class="card-side" *ngFor="let course of courses; let i=index ">
+
+        <div class="courses-container">
+          <div class="course">
+            <div class="course-preview">
+              <h6>Course</h6>
+              <h2>{{course.name}}</h2>
+              <a href="#">View all chapters <i class="fas fa-chevron-right"></i></a>
+            </div>
+            <div class="course-info">
+              <div class="progress-container">
+                <div class="progress"></div>
+                <span class="progress-text">
+					1/9 Challenges
+				</span>
+              </div>
+              <h6>Chapter 4</h6>
+              <h2>{{course.description}}</h2>
+              <button class="btn" (click)="subscribe(i+1)">Subscribe</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
